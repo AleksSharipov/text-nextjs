@@ -28,11 +28,10 @@ const fetchData = async () => await
 const Home = ({ myCard }: { myCard: any }) => {
   const classes = useStyles();
 
-
   return (
-    <MainContainer title={`Home page`}>
+    <MainContainer title={`Svg module`} >
       {/* <Head>
-        <title>Home page</title>
+        <title>Svg modal</title>
       </Head>
       <section>
         <Link href="/">Home</Link>
@@ -42,9 +41,9 @@ const Home = ({ myCard }: { myCard: any }) => {
         <Box>
           <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} >
             {
-              myCard && myCard.map((card: { title: string; icon: string; }) => {
+              myCard && myCard.map((card: { title: string; icon: string; description: string; }) => {
                 return (
-                  <CardContent key={`${card.title}_${card.icon}`} title={card.title} icon={card.icon} />
+                  <CardContent key={`${card.title}_${card.icon}`} title={card.title} icon={card.icon} description={card.description} />
                 )
               })
             }
