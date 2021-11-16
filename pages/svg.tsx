@@ -1,14 +1,11 @@
 import React from 'react';
-import Head from 'next/head';
 import axios from 'axios';
-import Link from 'next/link';
 
-import Box from '@mui/material/Box';
-import { Grid } from '@mui/material';
+import { Grid, Box } from '@mui/material';
+import { makeStyles } from '@mui/styles';
+
 import CardContent from '@/components/CardContent';
 import MainContainer from '@/components/MainContainer';
-
-import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles(() => ({
   wrapper: {
@@ -30,13 +27,6 @@ const Home = ({ myCard }: { myCard: any }) => {
 
   return (
     <MainContainer title={`Svg module`} >
-      {/* <Head>
-        <title>Svg modal</title>
-      </Head>
-      <section>
-        <Link href="/">Home</Link>
-        <Link href="/svg">Svg modal</Link>
-      </section> */}
       <section className={classes.wrapper} >
         <Box>
           <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} >

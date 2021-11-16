@@ -9,7 +9,11 @@ const MainContainer = ({ children, title }: { children: React.ReactElement; titl
       <Head>
         <title>{title}</title>
       </Head>
-      <section>
+      <section style={{
+        maxWidth: '1280px',
+        width: '100%',
+        margin: '20px auto',
+      }}>
         <Stack spacing={2} direction="row">
           <Link href="/"><Button variant="outlined">Home</Button></Link>
           <Link href="/svg"><Button variant="outlined">Svg modal</Button></Link>

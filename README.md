@@ -1,34 +1,16 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Тестовое задание выполненное на NextJS, mui. 
+Была реализована галерея карточек на nextJS. Пользователю доступно 2 страницы: home и svg modal
 
-## Getting Started
+## Реализация проекта:
+Для обращения к "серверу" использовал axios. Данные получаю с помощью запроса по адресу "http://localhost:3000/api/hello". Для ui использовались готовые компоненты material ui. Для некоторых элементов применял свою стилизацию. 
 
-First, run the development server:
+### Функционал:
+Для большего удобства сделал небольшое меню навигации. Оно позволяет переходить с home на svg modal и обратно. Чтобы не дублировать код, обернул страницы "index" и "svg" в 'MainContainer", в который пропсами прокинул header(meta данные которые моглы бы в теории быть и title) каждой страницы. 
+Плюс навигацию ввёл по причине того, что если на прямую через url обращаться к другой странице, то происходит перезагрузка (по идеи, это не соответствует концепции nextjs), плюс возникает ошибка стилей связанная с SSR.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+В tsconfig настроен aliases для относительных путей компонентов вида: @components/"name-component".
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+На странице svg model пользователь может открыть модальное окно любой из карточек и получить ее описание. 
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Возможные предложения по улучшению:
+По идеи, в более крупный проект следует подключать redux и хранить данные в глобальном стейте. 

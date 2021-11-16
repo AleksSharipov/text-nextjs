@@ -1,13 +1,7 @@
 import React from 'react';
 
-import { Grid } from '@mui/material';
+import { Box, Modal, Grid, Typography, CardContent as MuiCardContent, Card as MuiCard } from '@mui/material';
 import { makeStyles } from '@mui/styles';
-import { CardContent as MuiCardContent } from '@mui/material';
-import { Card as MuiCard } from '@mui/material';
-import Typography from '@mui/material/Typography';
-
-import Box from '@mui/material/Box';
-import Modal from '@mui/material/Modal';
 
 const useStyles = makeStyles(() => ({
   card: {

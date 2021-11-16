@@ -7,8 +7,6 @@ type Data = {
   data: any
 }
 
-// console.log(data)
-
 export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
